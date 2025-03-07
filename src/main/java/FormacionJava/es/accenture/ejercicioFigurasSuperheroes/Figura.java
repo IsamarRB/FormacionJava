@@ -41,4 +41,9 @@ public class Figura {
     public String toString() {
         return "Figura{" + "codigo='" + codigo + '\'' + ", precio=" + precio + ", dimension=" + dimension + ", superheroe=" + superheroe + '}';
     }
+
+    public double calcularVolumen() {
+        return this.dimension.getAncho() * this.dimension.getAlto() * this.dimension.getProfundidad();
+    }
+
 }
