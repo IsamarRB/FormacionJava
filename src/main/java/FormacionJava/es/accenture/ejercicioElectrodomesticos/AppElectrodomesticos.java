@@ -5,6 +5,12 @@ public class AppElectrodomesticos {
     private static final double PRECIO_KWH = 0.5;
 
     public static void main(String[] args) {
+        System.out.println("    _                _ _                           \n" +
+                "   / \\   _ __  _ __ | (_) __ _ _ __   ___ ___  ___ \n" +
+                "  / _ \\ | '_ \\| '_ \\| | |/ _` | '_ \\ / __/ _ \\/ __|\n" +
+                " / ___ \\| |_) | |_) | | | (_| | | | | (_|  __/\\__ \\\n" +
+                "/_/   \\_\\ .__/| .__/|_|_|\\__,_|_| |_|\\___\\___||___/\n" +
+                "        |_|   |_|                                  ");
         Electrodomestico e = new Electrodomestico();
         e.setTipo("Frigorifico");
         e.setMarca("Balay");
