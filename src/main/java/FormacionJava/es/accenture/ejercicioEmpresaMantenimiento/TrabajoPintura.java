@@ -1,4 +1,4 @@
-package FormacionJava.es.accenture.es.accenture.ejercicioEmpresaMantenimiento;
+package FormacionJava.es.accenture.ejercicioEmpresaMantenimiento;
 
 import java.text.DecimalFormat;
 
@@ -6,7 +6,7 @@ public class TrabajoPintura extends Servicio {
     private double superficie;
     private double precioPintura;
 
-    public TrabajoPintura() {} //Constructor vacío
+    public TrabajoPintura(String antonio, String date, String segurosMartínez, int i, int i1) {} //Constructor vacío
 
     public TrabajoPintura(double superficie, double precioPintura){  //Constructor de parámetros
         this.superficie = superficie;

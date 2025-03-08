@@ -1,4 +1,4 @@
-package FormacionJava.es.accenture.es.accenture.ejercicioEmpresaMantenimiento;
+package FormacionJava.es.accenture.ejercicioEmpresaMantenimiento;
 
 
 import java.text.DecimalFormat;
