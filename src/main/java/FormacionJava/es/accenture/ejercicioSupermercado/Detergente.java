@@ -1,6 +1,6 @@
 package FormacionJava.es.accenture.ejercicioSupermercado;
 
-public abstract class Detergente implements EsLiquido, ConDescuento {
+public class Detergente implements EsLiquido, ConDescuento {
     private String marca;
     private double precio;
     private double volumen;

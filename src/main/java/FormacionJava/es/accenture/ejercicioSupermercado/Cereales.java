@@ -8,7 +8,7 @@ public class Cereales implements EsAlimento {
     private String tipoCereal;
     private LocalDate caducidad;
 
-    public Cereales(){}
+    public Cereales(String crunchy, String espelta, double v, LocalDate caducidad){}
 
     public Cereales(String marca, double precio, String tipoCereal, LocalDate caducidad){
         this.marca = marca;
