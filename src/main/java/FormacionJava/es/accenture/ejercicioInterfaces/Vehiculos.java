@@ -1,4 +1,4 @@
-package FormacionJava.es.accenture.es.accenture.ejercicioInterfaces;
+package FormacionJava.es.accenture.ejercicioInterfaces;
 
 public abstract class Vehiculos implements IVehiculo {
     private int velocidad; // Atributo de velocidad

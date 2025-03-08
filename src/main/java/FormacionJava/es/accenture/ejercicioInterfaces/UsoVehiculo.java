@@ -1,4 +1,4 @@
-package FormacionJava.es.accenture.es.accenture.ejercicioInterfaces;
+package FormacionJava.es.accenture.ejercicioInterfaces;
 
 public class UsoVehiculo {
         public static void main(String[] args) {

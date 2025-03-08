@@ -1,17 +1,20 @@
-package FormacionJava.es.accenture.es.accenture.ejercicioInterfaces;
+package FormacionJava.es.accenture.ejercicioInterfaces;
 
-public class Coche extends Vehiculos {
+public class Moto extends Vehiculos {
 
-    public Coche() { super(); }
+        // Constructor vacío
+        public Moto() {
+            super();
+        }
 
         // Constructor con velocidad
-        public Coche(int velocidad) {
+        public Moto(int velocidad) {
             super(velocidad);
         }
 
         // Constructor de copia
-        public Coche(Coche otro) {
-            super(otro);
+        public Moto(Moto otra) {
+            super(otra);
         }
 
         // Implementación del método frenar
@@ -20,7 +23,7 @@ public class Coche extends Vehiculos {
             int nuevaVelocidad = getVelocidad() - cuanto;
             if (nuevaVelocidad < 0) nuevaVelocidad = 0;
             setVelocidad(nuevaVelocidad);
-            return "El coche ha frenado y va a " + nuevaVelocidad + " km/hora.";
+            return "La moto ha frenado y va a " + nuevaVelocidad + " km/hora.";
         }
 
         // Implementación del método acelerar
@@ -30,9 +33,11 @@ public class Coche extends Vehiculos {
             setVelocidad(nuevaVelocidad);
 
             if (nuevaVelocidad > VELOCIDAD_MAX) {
-                return "Exceso de velocidad. El coche ha acelerado y va a " + nuevaVelocidad + " km/hora.";
+                return "Exceso de velocidad. La moto ha acelerado y va a " + nuevaVelocidad + " km/hora.";
             } else {
-                return "El coche ha acelerado y va a " + nuevaVelocidad + " km/hora.";
+                return "La moto ha acelerado y va a " + nuevaVelocidad + " km/hora.";
             }
         }
     }
+
+
