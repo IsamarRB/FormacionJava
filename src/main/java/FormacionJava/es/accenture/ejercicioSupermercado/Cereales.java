@@ -5,7 +5,7 @@ import java.time.LocalDate;
 public class Cereales implements EsAlimento {
     private String marca;
     private String tipoCereal;
-    private double precio;
+    double precio;
     private LocalDate caducidad;
 
     public Cereales() {

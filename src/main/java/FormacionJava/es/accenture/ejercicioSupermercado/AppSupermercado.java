@@ -24,7 +24,7 @@ public class AppSupermercado {
         }
 
         // Calcular el precio total
-        double precioTotal = detergente.getPrecioDescuento() + cereales.getPrecio() + vino.getPrecioDescuento();
+        double precioTotal = detergente.getPrecioDescuento() + cereales.precio + vino.getPrecioDescuento();
         System.out.printf("\nPrecio total de todos los productos: %.2f€\n", precioTotal);
 
         // Calcular las calorías totales de los productos alimenticios
