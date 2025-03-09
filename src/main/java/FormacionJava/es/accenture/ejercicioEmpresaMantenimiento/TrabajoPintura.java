@@ -1,10 +1,12 @@
 package FormacionJava.es.accenture.ejercicioEmpresaMantenimiento;
 
+
+import java.text.DecimalFormat;
+
 public class TrabajoPintura extends Servicio {
     private double superficie;
     private double precioPintura;
 
-    // Constructores
     public TrabajoPintura(String trabajador, String fechaInicio, String cliente, double superficie, double precioPintura) {
         super(trabajador, fechaInicio, cliente);
         this.superficie = superficie;
@@ -42,28 +44,31 @@ public class TrabajoPintura extends Servicio {
         double costeMaterial = costeMaterial();
         double costeManoObra = costeManoObra();
         double costeTotal = costeMaterial + costeManoObra;
+
         if (superficie < 50) {
-            costeTotal *= 1.15; // Añadir 15% si la superficie es menor a 50m2
+            costeTotal *= 1.15; // Añadir 15% si la superficie es menor a 50m²
         }
+
         return costeTotal;
     }
 
     @Override
     public String detalleServicio() {
+        DecimalFormat formato = new DecimalFormat("#.00");
         double costeMaterial = costeMaterial();
         double costeManoObra = costeManoObra();
         double costeTotal = costeTotal();
-        double costeAdicional = superficie < 50 ? costeTotal - (costeMaterial + costeManoObra) : 0;
+        double costeAdicional = (superficie < 50) ? (costeTotal - (costeMaterial + costeManoObra)) : 0;
 
         return "TRABAJO DE PINTURA\n" +
                 "Cliente: " + getCliente() + "\n" +
                 "Fecha de Inicio: " + getFechaInicio() + "\n" +
                 "-----------------------------------------\n" +
                 "Pintor: " + getTrabajador() + "\n" +
-                "Coste Material: " + String.format("%.2f", costeMaterial) + "\n" +
-                "Coste Mano Obra: " + String.format("%.2f", costeManoObra) + "\n" +
-                "Coste Adicional: " + String.format("%.2f", costeAdicional) + "\n" +
-                "Total: " + String.format("%.2f", costeTotal) + "\n" +
-                "--------------------------------------";
+                "Coste Material: " + formato.format(costeMaterial) + "€\n" +
+                "Coste Mano Obra: " + formato.format(costeManoObra) + "€\n" +
+                "Coste Adicional: " + formato.format(costeAdicional) + "€\n" +
+                "Total: " + formato.format(costeTotal) + "€\n" +
+                "--------------------------------------\n";
     }
 }

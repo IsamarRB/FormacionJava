@@ -1,10 +1,11 @@
 package FormacionJava.es.accenture.ejercicioEmpresaMantenimiento;
 
 
+import java.text.DecimalFormat;
+
 public class RevisionAlarma extends Servicio {
     private int numeroAlarmas;
 
-    // Constructores
     public RevisionAlarma(String fechaInicio, String cliente, int numeroAlarmas) {
         super("Revisor Especialista Contraincendios", fechaInicio, cliente);
         this.numeroAlarmas = numeroAlarmas;
@@ -25,7 +26,7 @@ public class RevisionAlarma extends Servicio {
 
     @Override
     public double costeManoObra() {
-        return (numeroAlarmas / 3) * 40;
+        return (numeroAlarmas / 3.0) * 40;
     }
 
     @Override
@@ -35,11 +36,12 @@ public class RevisionAlarma extends Servicio {
 
     @Override
     public String detalleServicio() {
+        DecimalFormat formato = new DecimalFormat("#.00");
         return "REVISIÓN PERIÓDICA ALARMAS CONTRAINCENDIO\n" +
                 "Cliente: " + getCliente() + "\n" +
                 "Fecha: " + getFechaInicio() + "\n" +
                 "--------------------------------------\n" +
-                "Total: " + String.format("%.2f", costeTotal()) + "\n" +
-                "--------------------------------------";
+                "Total: " + formato.format(costeTotal()) + "€\n" +
+                "--------------------------------------\n";
     }
 }

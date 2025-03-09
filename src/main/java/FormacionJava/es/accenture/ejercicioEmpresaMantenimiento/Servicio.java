@@ -6,7 +6,6 @@ public abstract class Servicio {
     private String fechaInicio;
     private String cliente;
 
-    // Constructores
     public Servicio(String trabajador, String fechaInicio, String cliente) {
         this.trabajador = trabajador;
         this.fechaInicio = fechaInicio;
@@ -37,7 +36,6 @@ public abstract class Servicio {
         this.cliente = cliente;
     }
 
-    // Métodos abstractos
     public abstract double costeMaterial();
     public abstract double costeManoObra();
     public abstract double costeTotal();
