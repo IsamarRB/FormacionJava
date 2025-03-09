@@ -6,26 +6,29 @@ import java.util.List;
 
 public class AppSupermercado {
     public static void main(String[] args) {
-        // Creación de objetos
+        // Crear instancias de productos
         Detergente detergente = new Detergente("Limpiamas", 2.5, 33, "Botella de plástico", 2);
         Cereales cereales = new Cereales("Crunchy", "Espelta", 3.0, LocalDate.of(2022, 8, 2));
-        Vino vino = new Vino("Plimplar", "Tinto", 12.0, 8.0, 330, "Botella de cristal", LocalDate.of(2023, 7, 12), 5);
+        Vino vino = new Vino("Plimplar", "Tinto", 12.0, 8.0, 330, "Botella de cristal",
+                LocalDate.of(2023, 7, 12), 5);
 
-        // Mostrar productos
-        System.out.println(detergente);
-        System.out.println(cereales);
-        System.out.println(vino);
+        // Lista de productos para calcular el precio total
+        List<Object> productos = new ArrayList<>();
+        productos.add(detergente);
+        productos.add(cereales);
+        productos.add(vino);
 
-        // Calcular suma total de precios
-        double totalPrecio = detergente.getPrecioDescuento() + cereales.getPrecio() + vino.getPrecioDescuento();
-        System.out.println("Precio total de todos los productos: " + totalPrecio + "€");
+        // Imprimir los productos
+        for (Object producto : productos) {
+            System.out.println(producto);
+        }
 
-        // Polimorfismo con lista de alimentos
-        List<EsAlimento> alimentos = new ArrayList<>();
-        alimentos.add(cereales);
-        alimentos.add(vino);
+        // Calcular el precio total
+        double precioTotal = detergente.getPrecioDescuento() + cereales.getPrecio() + vino.getPrecioDescuento();
+        System.out.printf("\nPrecio total de todos los productos: %.2f€\n", precioTotal);
 
-        int totalCalorias = alimentos.stream().mapToInt(EsAlimento::getCalorias).sum();
-        System.out.println("Suma total de calorías de los alimentos: " + totalCalorias);
+        // Calcular las calorías totales de los productos alimenticios
+        int totalCalorias = cereales.getCalorias() + vino.getCalorias();
+        System.out.println("Total calorías: " + totalCalorias);
     }
 }
