@@ -6,17 +6,13 @@ public abstract class Servicio {
     private String fechaInicio;
     private String cliente;
 
-    // Constructor vacío
-    public Servicio() {}
-
-    // Constructor con parámetros
+    // Constructores
     public Servicio(String trabajador, String fechaInicio, String cliente) {
         this.trabajador = trabajador;
         this.fechaInicio = fechaInicio;
         this.cliente = cliente;
     }
 
-    // Getters y Setters
     public String getTrabajador() {
         return trabajador;
     }
