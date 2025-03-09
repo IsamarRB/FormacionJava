@@ -7,6 +7,16 @@ import java.util.List;
 
 public class AppEmpresaServicios {
     public static void main(String[] args) {
+        System.out.println(" _____                                     \n" +
+                "| ____|_ __ ___  _ __  _ __ ___  ___  __ _ \n" +
+                "|  _| | '_ ` _ \\| '_ \\| '__/ _ \\/ __|/ _` |\n" +
+                "| |___| | | | | | |_) | | |  __/\\__ \\ (_| |\n" +
+                "|_____|_| |_| |_| .__/|_|  \\___||___/\\__,_|\n" +
+                "/ ___|  ___ _ __|_|  _(_) ___(_) ___  ___  \n" +
+                "\\___ \\ / _ \\ '__\\ \\ / / |/ __| |/ _ \\/ __| \n" +
+                " ___) |  __/ |   \\ V /| | (__| | (_) \\__ \\ \n" +
+                "|____/ \\___|_|    \\_/ |_|\\___|_|\\___/|___/ ");
+        System.out.println("-------------------------------------------");
         List<Servicio> servicios = new ArrayList<>();
 
         // Creación de instancias
