@@ -6,6 +6,12 @@ import java.util.List;
 
 public class AppSupermercado {
     public static void main(String[] args) {
+        System.out.println(" ____                                                         _       \n" +
+                "/ ___| _   _ _ __   ___ _ __ _ __ ___   ___ _ __ ___ __ _  __| | ___  \n" +
+                "\\___ \\| | | | '_ \\ / _ \\ '__| '_ ` _ \\ / _ \\ '__/ __/ _` |/ _` |/ _ \\ \n" +
+                " ___) | |_| | |_) |  __/ |  | | | | | |  __/ | | (_| (_| | (_| | (_) |\n" +
+                "|____/ \\__,_| .__/ \\___|_|  |_| |_| |_|\\___|_|  \\___\\__,_|\\__,_|\\___/ \n" +
+                "            |_|                                                       \n");
         // Crear instancias de productos
         Detergente detergente = new Detergente("Limpiamas", 2.5, 33, "Botella de plástico", 2);
         Cereales cereales = new Cereales("Crunchy", "Espelta", 3.0, LocalDate.of(2022, 8, 2));
