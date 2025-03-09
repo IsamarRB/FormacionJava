@@ -5,7 +5,7 @@ public class Dimension {
     private double ancho;
     private double profundidad;
 
-    public Dimension() {
+    public Dimension(Dimension dimension) {
         this.alto = 0;
         this.ancho = 0;
         this.profundidad = 0;

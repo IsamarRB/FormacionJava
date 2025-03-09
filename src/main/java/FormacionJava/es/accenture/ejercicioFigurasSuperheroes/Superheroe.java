@@ -6,7 +6,7 @@ public class Superheroe {
     private boolean capa;
 
     // Constructores
-    public Superheroe() {} //constructor vacío
+    public Superheroe(Superheroe superheroe) {} //constructor vacío
 
     public Superheroe(String nombre, String descripcion, boolean capa) {
         this.nombre = nombre;
